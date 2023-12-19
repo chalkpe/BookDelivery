@@ -32,7 +32,6 @@ class BookDelivery: JavaPlugin(), Listener {
         val locations = getLocationsFromPages(entity, (book.itemMeta as BookMeta).pages)
 
         for (location in locations) {
-            println(location)
             if (moveToChest(location, event.item.itemStack)) {
                 event.item.remove()
                 event.isCancelled = true
