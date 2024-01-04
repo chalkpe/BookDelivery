@@ -1,5 +1,6 @@
 package pe.chalk.bukkit.bookdelivery
 
+import org.bstats.bukkit.Metrics
 import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.Sound
@@ -21,6 +22,7 @@ class BookDelivery: JavaPlugin(), Listener {
 
     override fun onEnable() {
         server.pluginManager.registerEvents(this, this)
+        Metrics(this, 20645)
     }
 
     @EventHandler
